@@ -5,72 +5,34 @@
 
 @layer base {
   :root {
+    // Adjust color variables for better contrast
     --background: 217 71% 10%;
     --foreground: 210 20% 98%;
 
     --card: 217 71% 15%;
     --card-foreground: 210 20% 98%;
 
-    --popover: 217 71% 15%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 196 92% 43%;
+    --primary: 196 92% 50%;  // Brighter primary color
     --primary-foreground: 210 20% 98%;
 
-    --secondary: 199 89% 48%;
+    --secondary: 199 89% 55%;  // Lighter secondary color
     --secondary-foreground: 210 20% 98%;
 
     --muted: 217 71% 20%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 199 92% 20%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 214.3 31.8% 30%;
-    --input: 214.3 31.8% 30%;
-    --ring: 196 92% 43%;
-
-    --radius: 0.75rem;
-  }
-
-  * {
-    @apply border-border;
+    --muted-foreground: 215 20% 75%;  // Slightly lighter muted text
   }
 
   body {
-    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply relative bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl overflow-hidden;
+    @apply relative bg-white/15 backdrop-blur-md border border-white/30 shadow-lg rounded-2xl overflow-hidden;
   }
   
   .ocean-gradient {
-    @apply bg-gradient-ocean text-white;
-  }
-  
-  .ocean-gradient-light {
-    @apply bg-gradient-ocean-light;
-  }
-
-  .wave-bg {
-    @apply before:content-[''] before:absolute before:inset-0 before:bg-wave-pattern before:opacity-5 before:bg-repeat before:bg-cover;
-  }
-  
-  .bottom-nav-item {
-    @apply flex flex-col items-center justify-center text-xs font-medium transition-colors;
-  }
-  
-  .bottom-nav-item svg {
-    @apply w-5 h-5 mb-1;
-  }
-
-  .animated-underline {
-    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-ocean-400 after:transition-all after:duration-300 hover:after:w-full;
+    @apply bg-gradient-to-r from-ocean-400 to-ocean-500 text-white;
   }
 }
