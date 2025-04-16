@@ -5,32 +5,32 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 217 71% 10%;
+    --foreground: 210 20% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 217 71% 15%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 217 71% 15%;
+    --popover-foreground: 210 20% 98%;
 
     --primary: 196 92% 43%;
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 210 20% 98%;
 
     --secondary: 199 89% 48%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 71% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 199 92% 95%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 199 92% 20%;
+    --accent-foreground: 210 20% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 30%;
+    --input: 214.3 31.8% 30%;
     --ring: 196 92% 43%;
 
     --radius: 0.75rem;
@@ -47,7 +47,7 @@
 
 @layer components {
   .glass-card {
-    @apply relative bg-white/20 backdrop-blur-md border border-white/30 shadow-lg rounded-2xl overflow-hidden;
+    @apply relative bg-white/10 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl overflow-hidden;
   }
   
   .ocean-gradient {
@@ -71,6 +71,6 @@
   }
 
   .animated-underline {
-    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-ocean-500 after:transition-all after:duration-300 hover:after:w-full;
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-ocean-400 after:transition-all after:duration-300 hover:after:w-full;
   }
 }
