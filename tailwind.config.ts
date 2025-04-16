@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				ocean: {
+					50: '#eef8ff',
+					100: '#d9f0ff',
+					200: '#bae5ff',
+					300: '#8ad4ff',
+					400: '#54b8fc',
+					500: '#2d9bf5',
+					600: '#1980e8',
+					700: '#1667d3',
+					800: '#1856ab',
+					900: '#1a4886',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +97,40 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'wave': {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(-25%)' },
+					'100%': { transform: 'translateX(0)' },
+				},
+				'wave-reverse': {
+					'0%': { transform: 'translateX(0)' },
+					'50%': { transform: 'translateX(25%)' },
+					'100%': { transform: 'translateX(0)' },
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'pulse-gentle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'wave': 'wave 15s ease-in-out infinite',
+				'wave-reverse': 'wave-reverse 10s ease-in-out infinite',
+				'float': 'float 5s ease-in-out infinite',
+				'pulse-gentle': 'pulse-gentle 4s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(180deg, rgba(14, 165, 233, 0.15) 0%, rgba(14, 165, 233, 0.05) 100%)',
+				'wave-pattern': "url('/wave-pattern.svg')",
+				'gradient-ocean': 'linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%)',
+				'gradient-ocean-light': 'linear-gradient(90deg, rgba(14, 165, 233, 0.2) 0%, rgba(56, 189, 248, 0.2) 100%)',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
