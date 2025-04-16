@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-white via-ocean-50/20 to-white">
+    <section id="home" className="relative pt-10 pb-12 md:py-24 overflow-hidden bg-gradient-to-b from-white via-ocean-50/20 to-white">
       {/* Modern background elements */}
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.015] mix-blend-multiply"></div>
       
@@ -12,7 +12,7 @@ const HeroSection = () => {
       <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-ocean-300/30 to-ocean-100/30 rounded-full blur-3xl opacity-70 animate-float"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative">
             <div className="absolute -left-10 top-10 w-20 h-20 bg-ocean-100 rounded-full blur-xl opacity-70"></div>
             <div className="relative backdrop-blur-[2px] p-1 rounded-lg">
@@ -20,10 +20,10 @@ const HeroSection = () => {
                 <span className="w-2 h-2 bg-ocean-500 rounded-full mr-2 animate-pulse"></span>
                 Professional Swimming Instructor
               </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-900 mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-ocean-900 mb-4 md:mb-6 leading-tight">
                 Swim with <span className="bg-gradient-to-r from-ocean-600 to-ocean-500 inline-block text-transparent bg-clip-text">Confidence</span> & Joy
               </h1>
-              <p className="text-lg text-ocean-700/90 mb-8 max-w-md">
+              <p className="text-lg text-ocean-700/90 mb-6 md:mb-8 max-w-md">
                 Expert swimming lessons for all ages and skill levels with certified instructor Jitesh Wadhwa.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -53,7 +53,58 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* Hero Image with modern design */}
+          {/* Mobile Hero Image */}
+          <div className="lg:hidden mt-6 relative">
+            {/* Decorative elements */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08)_0,transparent_60%)]"></div>
+            
+            {/* Profile Image Container */}
+            <div className="relative rounded-xl overflow-hidden shadow-md border border-white/50 backdrop-blur-sm">
+              {/* Glass overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/60 via-ocean-900/20 to-transparent z-10"></div>
+              
+              {/* Image */}
+              <img 
+                src="https://images.pexels.com/photos/261185/pexels-photo-261185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                alt="Jitesh Wadhwa - Swimming Instructor" 
+                className="object-cover object-center w-full h-[280px]"
+              />
+              
+              {/* Bottom content */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-ocean-900/80 to-transparent z-20">
+                <h3 className="text-white text-lg font-semibold mb-0.5">Jitesh Wadhwa</h3>
+                <p className="text-ocean-100 text-xs">Professional Swimming Coach</p>
+              </div>
+            </div>
+            
+            {/* Mobile Stats */}
+            <div className="flex justify-between mt-3">
+              <div className="bg-white/90 backdrop-blur-md shadow-sm rounded-lg p-2 flex items-center space-x-2 border border-ocean-50">
+                <div className="bg-gradient-to-br from-ocean-100 to-ocean-50 p-1.5 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-ocean-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs text-ocean-600 font-medium">Trusted by</p>
+                  <p className="font-bold text-ocean-900 text-xs">500+ Students</p>
+                </div>
+              </div>
+              
+              <div className="bg-white/90 backdrop-blur-md shadow-sm rounded-lg p-2 border border-ocean-50">
+                <div className="flex items-center space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-xs font-medium text-ocean-900 mt-0.5">5.0 Rating</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Desktop Hero Image with modern design */}
           <div className="hidden lg:block relative">
             {/* Decorative elements */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.08)_0,transparent_60%)]"></div>
