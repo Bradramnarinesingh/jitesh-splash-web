@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -63,18 +64,17 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				ocean: {
-          50: '#e6f2ff',   // Very light blue
-          100: '#b3e0ff',  // Light blue
-          200: '#80caff',  // Soft blue
-          300: '#4db3ff',  // Brighter blue
-          400: '#2d9bf5',  // Primary blue
-          500: '#1a88e6',  // Slightly darker blue
-          600: '#1667d3',  // Deep blue
-          700: '#1254a9',  // Navy blue
-          800: '#0e4285',  // Dark navy
-          900: '#0a3166',  // Very dark navy
-          950: '#071c3d',  // Almost black navy
-        },
+					50: '#eef8ff',
+					100: '#d9f0ff',
+					200: '#bae5ff',
+					300: '#8ad4ff',
+					400: '#54b8fc',
+					500: '#2d9bf5',
+					600: '#1980e8',
+					700: '#1667d3',
+					800: '#1856ab',
+					900: '#1a4886',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -126,10 +126,10 @@ export default {
 				'pulse-gentle': 'pulse-gentle 4s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'hero-pattern': 'linear-gradient(180deg, rgba(7, 28, 61, 0.3) 0%, rgba(14, 66, 133, 0.1) 100%)',
+				'hero-pattern': 'linear-gradient(180deg, rgba(14, 165, 233, 0.15) 0%, rgba(14, 165, 233, 0.05) 100%)',
 				'wave-pattern': "url('/wave-pattern.svg')",
-				'gradient-ocean': 'linear-gradient(90deg, #1a88e6 0%, #4db3ff 100%)',
-				'gradient-ocean-light': 'linear-gradient(90deg, rgba(26, 136, 230, 0.2) 0%, rgba(77, 179, 255, 0.2) 100%)',
+				'gradient-ocean': 'linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%)',
+				'gradient-ocean-light': 'linear-gradient(90deg, rgba(14, 165, 233, 0.2) 0%, rgba(56, 189, 248, 0.2) 100%)',
 			},
 		}
 	},

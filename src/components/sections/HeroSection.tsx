@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-32 lg:pt-40 pb-20 lg:pb-28 relative overflow-hidden">
+    <section id="home" className="pt-20 lg:pt-28 pb-20 lg:pb-28 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-hero-pattern -z-10"></div>
       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-ocean-100/30 to-transparent -z-10"></div>
@@ -31,11 +31,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="ocean-gradient rounded-full text-lg px-8 py-6"
-              onClick={() => {
-                document.getElementById("contact")?.scrollIntoView({ 
-                  behavior: "smooth" 
-                });
-              }}
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Book a Lesson
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -44,11 +40,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="border-ocean-400 text-ocean-600 hover:text-ocean-700 hover:bg-ocean-50 rounded-full text-lg px-8 py-6"
-              onClick={() => {
-                document.getElementById("lessons")?.scrollIntoView({ 
-                  behavior: "smooth" 
-                });
-              }}
+              onClick={() => document.getElementById("lessons")?.scrollIntoView({ behavior: "smooth" })}
             >
               View Pricing
             </Button>
