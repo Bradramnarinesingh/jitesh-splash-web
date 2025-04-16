@@ -1,4 +1,3 @@
-
 import { Home, Info, Book, MessageSquare, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -57,7 +56,7 @@ const MobileNavbar = () => {
   };
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 glass-card rounded-none rounded-t-xl border-t border-white/20 px-2 py-3 bg-ocean-800/90 backdrop-blur-lg">
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 px-2 py-3 shadow-sm">
       <div className="grid grid-cols-5 gap-1">
         {navItems.map((item) => (
           <a
@@ -67,8 +66,8 @@ const MobileNavbar = () => {
             className={cn(
               "bottom-nav-item",
               item.isActive 
-                ? "text-white" 
-                : "text-white/70 hover:text-white"
+                ? "text-ocean-700" 
+                : "text-gray-500 hover:text-ocean-600"
             )}
           >
             {item.icon}

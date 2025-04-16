@@ -1,4 +1,3 @@
-
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -70,59 +69,60 @@ const LessonsSection = () => {
   ];
 
   return (
-    <section id="lessons" className="py-16 lg:py-24 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white to-ocean-50 -z-10"></div>
+    <section id="lessons" className="py-16 lg:py-20 bg-white relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-[0.02] -z-10"></div>
+      <div className="absolute -top-40 -left-40 w-80 h-80 bg-ocean-100/50 rounded-full blur-3xl -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-ocean-900 mb-4">Swimming Lessons & Pricing</h2>
-          <div className="w-20 h-1 bg-ocean-500 mx-auto mb-6"></div>
+        <div className="text-center mb-12">
+          <span className="inline-block py-1 px-3 text-sm font-medium text-ocean-600 bg-ocean-50 rounded-full mb-3">Our Programs</span>
+          <h2 className="text-3xl font-bold text-ocean-900 mb-4">Swimming Lessons & Pricing</h2>
+          <div className="w-16 h-1 bg-ocean-400 mx-auto mb-6"></div>
           <p className="text-ocean-700 max-w-2xl mx-auto">
             Personalized swimming programs for every age and skill level
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {pricingPlans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`relative overflow-hidden ${plan.highlighted ? 'shadow-xl border-ocean-400 ring-2 ring-ocean-200' : 'shadow-lg'}`}
+              className={`relative overflow-hidden hover:shadow-md transition-shadow duration-300 
+                ${plan.highlighted ? 'border-ocean-200 shadow-md' : 'border-gray-100 shadow-sm'}`}
             >
               {plan.highlighted && (
-                <div className="absolute top-0 right-0">
-                  <div className="bg-ocean-500 text-white text-xs font-bold px-3 py-1 rotate-45 translate-x-6 translate-y-3">
+                <div className="absolute top-3 right-3">
+                  <div className="bg-ocean-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
                     Popular
                   </div>
                 </div>
               )}
               
-              <div className="absolute top-0 w-full h-1 ocean-gradient"></div>
-              
-              <CardHeader className="text-center pb-2">
-                <div className="text-sm font-semibold text-ocean-600 mb-1">{plan.ageGroup}</div>
-                <CardTitle className="text-2xl text-ocean-900">{plan.title}</CardTitle>
+              <CardHeader className={`text-center pb-2 ${plan.highlighted ? 'bg-ocean-50/50' : ''}`}>
+                <div className="text-sm font-medium text-ocean-600 mb-1">{plan.ageGroup}</div>
+                <CardTitle className="text-xl font-bold text-ocean-900">{plan.title}</CardTitle>
                 <div className="my-4">
-                  <span className="text-4xl font-bold text-ocean-800">{plan.price}</span>
+                  <span className="text-3xl font-bold text-ocean-800">{plan.price}</span>
                 </div>
-                <CardDescription>{plan.description}</CardDescription>
+                <CardDescription className="text-ocean-600">{plan.description}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 pt-4">
+              <CardContent className="space-y-3 pt-4">
                 <ul className="space-y-2">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle2 className="mr-2 h-5 w-5 text-ocean-500 shrink-0 mt-0.5" />
-                      <span className="text-ocean-700">{feature}</span>
+                      <CheckCircle2 className="mr-2 h-4 w-4 text-ocean-500 shrink-0 mt-0.5" />
+                      <span className="text-sm text-ocean-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
               <CardFooter>
                 <Button 
-                  className={`w-full rounded-xl ${
+                  className={`w-full ${
                     plan.highlighted 
-                      ? "ocean-gradient" 
-                      : "bg-white border border-ocean-300 text-ocean-700 hover:bg-ocean-50"
+                      ? "bg-ocean-600 hover:bg-ocean-700 text-white" 
+                      : "bg-white border border-ocean-200 text-ocean-700 hover:bg-ocean-50"
                   }`}
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
@@ -134,16 +134,19 @@ const LessonsSection = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <p className="text-ocean-700 max-w-2xl mx-auto mb-6">
-            Not sure which plan is right for you? Contact us for a free consultation to determine the best fit for your swimming goals.
-          </p>
-          <Button 
-            variant="outline" 
-            className="border-ocean-400 text-ocean-600 hover:text-ocean-700 hover:bg-ocean-50 rounded-full px-6"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Get in Touch
-          </Button>
+          <div className="bg-ocean-50 rounded-lg p-6 max-w-3xl mx-auto">
+            <h3 className="text-lg font-semibold text-ocean-800 mb-2">Not sure which plan is right for you?</h3>
+            <p className="text-ocean-700 mb-4">
+              Contact us for a free consultation to determine the best fit for your swimming goals.
+            </p>
+            <Button 
+              variant="outline" 
+              className="border-ocean-300 bg-white text-ocean-600 hover:text-ocean-700 hover:bg-ocean-50"
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Get in Touch
+            </Button>
+          </div>
         </div>
       </div>
     </section>

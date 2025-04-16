@@ -71,3 +71,26 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+# Jitesh Wadhwa Swimming Website
+
+## Image Integration Instructions
+
+1. **Save the profile image:**
+   - The profile image of Jitesh shown in the conversation needs to be saved to your project.
+   - Save the image as `jitesh-profile.jpg` in the `public` folder.
+   - Right-click on the image and select "Save image as..." to download it.
+   - Alternatively, if you have the original image file, rename it to `jitesh-profile.jpg` and place it in the `public` folder.
+
+2. **Verify the image path:**
+   - Ensure the image is accessible at `/jitesh-profile.jpg`
+   - The HeroSection component is now configured to use this image path.
+
+## About This Project
+
+This is a modern, professional website for swimming instructor Jitesh Wadhwa, featuring:
+
+- Responsive design for all device sizes
+- Modern UI with clean aesthetics and subtle animations
+- Sections for About, Lessons, Testimonials, and Contact information
+- Built with React, TypeScript, and Tailwind CSS

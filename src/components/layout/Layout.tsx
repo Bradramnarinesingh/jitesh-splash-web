@@ -1,4 +1,3 @@
-
 import { ReactNode, useEffect } from "react";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
@@ -31,7 +30,7 @@ const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-ocean-950">
+    <div className="min-h-screen flex flex-col bg-white">
       <DesktopNavbar />
       <main className="flex-grow">{children}</main>
       <MobileNavbar />
