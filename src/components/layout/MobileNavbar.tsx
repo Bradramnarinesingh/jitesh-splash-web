@@ -1,6 +1,5 @@
 
 import { Home, Info, Book, MessageSquare, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -11,7 +10,7 @@ interface NavItem {
 }
 
 const MobileNavbar = () => {
-  // Determine active route based on pathname
+  // Determine active route based on pathname and scroll position
   const pathname = window.location.pathname;
   
   const navItems: NavItem[] = [
@@ -47,13 +46,24 @@ const MobileNavbar = () => {
     },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 glass-card rounded-none rounded-t-xl border-t border-white/20 px-2 py-3 bg-ocean-500/90 backdrop-blur-lg">
+    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 glass-card rounded-none rounded-t-xl border-t border-white/20 px-2 py-3 bg-ocean-800/90 backdrop-blur-lg">
       <div className="grid grid-cols-5 gap-1">
         {navItems.map((item) => (
-          <Link
+          <a
             key={item.label}
-            to={item.href}
+            href={item.href}
+            onClick={(e) => handleNavClick(e, item.href)}
             className={cn(
               "bottom-nav-item",
               item.isActive 
@@ -63,7 +73,7 @@ const MobileNavbar = () => {
           >
             {item.icon}
             <span>{item.label}</span>
-          </Link>
+          </a>
         ))}
       </div>
     </nav>
