@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* kill horizontal scroll everywhere */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* support iOS safe-area insets */
+:root {
+  --safe-area-inset-left: env(safe-area-inset-left);
+  --safe-area-inset-right: env(safe-area-inset-right);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

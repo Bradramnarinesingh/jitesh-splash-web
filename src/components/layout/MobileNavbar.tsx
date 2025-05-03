@@ -38,17 +38,17 @@ const MobileNavbar = () => {
       isActive: hash === "#success-stories",
     },
     {
+      icon: <Calendar className="w-5 h-5" />,
+      label: "Contact",
+      href: "#contact",
+      isActive: hash === "#contact",
+    },
+    {
       icon: <FileText className="w-5 h-5" />,
       label: "Blog",
       href: "/blog",
       isActive: pathname.includes("blog"),
       isRoute: true,
-    },
-    {
-      icon: <Calendar className="w-5 h-5" />,
-      label: "Contact",
-      href: "#contact",
-      isActive: hash === "#contact",
     },
   ];
 
