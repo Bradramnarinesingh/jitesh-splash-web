@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImg from '../../assets/hero-experience.jpg';
 
 const HeroSection = () => {
   return (
@@ -26,6 +27,9 @@ const HeroSection = () => {
               <p className="text-lg text-ocean-700/90 mb-6 md:mb-8 max-w-md">
                 Expert swimming lessons for all ages and skill levels with certified instructor Jitesh Wadhwa.
               </p>
+              <p className="text-md text-ocean-600 mb-6 font-medium">
+                Trusted by 150+ students
+              </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button 
                   className="bg-gradient-to-r from-ocean-600 to-ocean-500 hover:from-ocean-700 hover:to-ocean-600 text-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5"
@@ -42,12 +46,12 @@ const HeroSection = () => {
                   variant="outline" 
                   className="border border-ocean-300 text-ocean-600 hover:text-ocean-700 hover:bg-ocean-50/80 backdrop-blur-sm rounded-lg px-6 py-2.5 transition-all duration-300"
                   onClick={() => {
-                    document.getElementById("lessons")?.scrollIntoView({ 
+                    document.getElementById("services")?.scrollIntoView({ 
                       behavior: "smooth" 
                     });
                   }}
                 >
-                  View Pricing
+                  View Services
                 </Button>
               </div>
             </div>
@@ -65,7 +69,7 @@ const HeroSection = () => {
               
               {/* Image */}
               <img 
-                src="https://images.pexels.com/photos/261185/pexels-photo-261185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src={heroImg}
                 alt="Jitesh Wadhwa - Swimming Instructor" 
                 className="object-cover object-center w-full h-[280px]"
               />
@@ -86,20 +90,9 @@ const HeroSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs text-ocean-600 font-medium">Trusted by</p>
-                  <p className="font-bold text-ocean-900 text-xs">500+ Students</p>
+                  <p className="text-xs text-ocean-600 font-medium">Experience</p>
+                  <p className="font-bold text-ocean-900 text-xs">9+ years</p>
                 </div>
-              </div>
-              
-              <div className="bg-white/90 backdrop-blur-md shadow-sm rounded-lg p-2 border border-ocean-50">
-                <div className="flex items-center space-x-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-xs font-medium text-ocean-900 mt-0.5">5.0 Rating</p>
               </div>
             </div>
           </div>
@@ -118,7 +111,7 @@ const HeroSection = () => {
               
               {/* Image */}
               <img 
-                src="https://images.pexels.com/photos/261185/pexels-photo-261185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src={heroImg}
                 alt="Jitesh Wadhwa - Swimming Instructor" 
                 className="object-cover object-center w-full h-[450px] transition-transform duration-700 group-hover:scale-105"
               />
@@ -138,25 +131,14 @@ const HeroSection = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-xs text-ocean-600 font-medium">Trusted by</p>
-                <p className="font-bold text-ocean-900 text-sm">500+ Students</p>
+                <p className="text-xs text-ocean-600 font-medium">Experience</p>
+                <p className="font-bold text-ocean-900 text-sm">9+ years</p>
               </div>
-            </div>
-            
-            <div className="absolute -top-5 -right-5 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-3 border border-ocean-50">
-              <div className="flex items-center space-x-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-xs font-medium text-ocean-900 mt-1">5.0 Rating</p>
             </div>
             
             {/* Experience badge */}
-            <div className="absolute top-1/2 -right-4 transform -translate-y-1/2 bg-gradient-to-r from-ocean-600 to-ocean-500 text-white py-2 px-3 rounded-lg shadow-lg">
-              <p className="text-xs font-medium">15+ Years Experience</p>
+            <div className="absolute top-20 right-0 transform bg-gradient-to-r from-ocean-600 to-ocean-500 text-white py-2 px-3 rounded-lg shadow-lg z-20">
+              <p className="text-xs font-medium">Trusted by 150+ students</p>
             </div>
           </div>
         </div>

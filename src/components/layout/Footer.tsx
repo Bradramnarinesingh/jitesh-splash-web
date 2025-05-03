@@ -1,4 +1,5 @@
-import { Facebook, Twitter, Instagram, Mail, Phone } from "lucide-react";
+import { Twitter, Instagram, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,14 +14,11 @@ const Footer = () => {
               Professional swimming lessons for all ages and skill levels. Learn to swim with confidence and joy.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-ocean-600 hover:text-ocean-800 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-ocean-600 hover:text-ocean-800 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-ocean-600 hover:text-ocean-800 transition-colors">
+              <a href="https://instagram.com/swimprotraining" target="_blank" rel="noopener noreferrer" className="text-ocean-600 hover:text-ocean-800 transition-colors">
                 <Instagram size={20} />
+              </a>
+              <a href="https://x.com/swimprotraining" target="_blank" rel="noopener noreferrer" className="text-ocean-600 hover:text-ocean-800 transition-colors">
+                <Twitter size={20} />
               </a>
             </div>
           </div>
@@ -29,9 +27,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-ocean-900">Quick Links</h4>
             <ul className="space-y-2">
               <li><a href="#home" className="text-ocean-700 hover:text-ocean-900 transition-colors">Home</a></li>
-              <li><a href="#about" className="text-ocean-700 hover:text-ocean-900 transition-colors">About Us</a></li>
-              <li><a href="#lessons" className="text-ocean-700 hover:text-ocean-900 transition-colors">Lessons</a></li>
-              <li><a href="#testimonials" className="text-ocean-700 hover:text-ocean-900 transition-colors">Testimonials</a></li>
+              <li><a href="#about" className="text-ocean-700 hover:text-ocean-900 transition-colors">About</a></li>
+              <li><a href="#services" className="text-ocean-700 hover:text-ocean-900 transition-colors">Services</a></li>
+              <li><a href="#success-stories" className="text-ocean-700 hover:text-ocean-900 transition-colors">Success Stories</a></li>
+              <li><Link to="/blog" className="text-ocean-700 hover:text-ocean-900 transition-colors">Blog</Link></li>
               <li><a href="#contact" className="text-ocean-700 hover:text-ocean-900 transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -41,11 +40,11 @@ const Footer = () => {
             <div className="space-y-2">
               <p className="flex items-center space-x-2 text-ocean-700">
                 <Phone size={16} className="text-ocean-600" />
-                <span>(123) 456-7890</span>
+                <span>647-677-1331</span>
               </p>
               <p className="flex items-center space-x-2 text-ocean-700">
                 <Mail size={16} className="text-ocean-600" />
-                <span>info@jiteshswimming.com</span>
+                <span>jitesh@swimprotraining.com</span>
               </p>
             </div>
           </div>

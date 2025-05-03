@@ -153,7 +153,55 @@ export default {
 				'grid-pattern': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e\")",
 				'radial-gradient': 'radial-gradient(circle at center, rgba(99,102,241,0.08) 0, transparent 60%)',
 			},
+			typography: {
+				DEFAULT: {
+					css: {
+						a: {
+							color: 'var(--tw-prose-links)',
+							'&:hover': {
+								color: 'var(--tw-prose-links-hover)',
+							},
+						},
+						h1: {
+							color: 'var(--tw-prose-headings)',
+						},
+						h2: {
+							color: 'var(--tw-prose-headings)',
+						},
+						h3: {
+							color: 'var(--tw-prose-headings)',
+						},
+						h4: {
+							color: 'var(--tw-prose-headings)',
+						},
+					},
+				},
+				ocean: {
+					css: {
+						'--tw-prose-body': '#0e4285',
+						'--tw-prose-headings': '#0a3166',
+						'--tw-prose-links': '#1a88e6',
+						'--tw-prose-links-hover': '#1667d3',
+						'--tw-prose-underline': '#1a88e6',
+						'--tw-prose-underline-hover': '#1667d3',
+						'--tw-prose-bold': '#0a3166',
+						'--tw-prose-counters': '#1a88e6',
+						'--tw-prose-bullets': '#4db3ff',
+						'--tw-prose-hr': '#e6f7ff',
+						'--tw-prose-quotes': '#071c3d',
+						'--tw-prose-quote-borders': '#b3e0ff',
+						'--tw-prose-captions': '#1254a9',
+						'--tw-prose-kbd': '#1254a9',
+						'--tw-prose-kbd-shadows': 'rgba(26, 136, 230, 0.2)',
+						'--tw-prose-code': '#1254a9',
+						'--tw-prose-pre-code': '#e6f7ff',
+						'--tw-prose-pre-bg': '#0e4285',
+						'--tw-prose-th-borders': '#b3e0ff',
+						'--tw-prose-td-borders': '#e6f7ff',
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;

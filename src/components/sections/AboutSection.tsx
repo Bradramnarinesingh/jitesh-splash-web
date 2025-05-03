@@ -1,4 +1,8 @@
 import { Award, Clock, Heart, Users } from "lucide-react";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
 
 const AboutSection = () => {
   const features = [
@@ -15,7 +19,7 @@ const AboutSection = () => {
     {
       icon: <Clock className="w-6 h-6 text-ocean-600" />,
       title: "Flexible Schedule",
-      description: "Morning, afternoon, and weekend sessions available"
+      description: "Weekday and weekend sessions available."
     },
     {
       icon: <Heart className="w-6 h-6 text-ocean-600" />,
@@ -23,6 +27,28 @@ const AboutSection = () => {
       description: "Specialized programs for kids, adults, and seniors"
     }
   ];
+
+  const formSchema = z.object({
+    name: z.string().min(1, "Name is required"),
+    email: z.string().email("Invalid email address"),
+    phone: z.string().min(10, "Phone number is required"),
+    date: z.string().min(1, "Date is required"),
+    message: z.string().min(1, "Message is required"),
+  });
+  
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // ...
+  };
 
   return (
     <section id="about" className="py-24 relative overflow-hidden">
@@ -64,7 +90,6 @@ const AboutSection = () => {
                   <div className="w-1.5 h-1.5 bg-ocean-400 rounded-full"></div>
                   <p className="text-white/80 text-sm">Certified Professional</p>
                 </div>
-                <h3 className="text-white text-xl font-bold">15+ Years of Experience</h3>
               </div>
             </div>
             
@@ -78,10 +103,10 @@ const AboutSection = () => {
             <div className="relative backdrop-blur-[1px]">
               <h3 className="text-2xl font-bold text-ocean-800 mb-3">Meet Your Instructor</h3>
               <p className="text-ocean-700 leading-relaxed">
-                With over 15 years of experience teaching swimming to people of all ages, Jitesh Wadhwa has developed a teaching methodology that emphasizes safety, confidence, and enjoyment in the water.
+                Jitesh Wadhwa has developed a teaching methodology that emphasizes safety, confidence, and enjoyment in the water.
               </p>
               <p className="text-ocean-700 leading-relaxed mt-4">
-                Jitesh is certified by the National Swimming Association and has trained competitive swimmers as well as complete beginners. His patient approach and technical expertise ensure that every student develops proper technique while building water confidence.
+                Jitesh is certified by the Lifesaving Society of Ontario and has trained competitive swimmers as well as complete beginners. His patient approach and technical expertise ensure that every student develops proper technique while building water confidence.
               </p>
             </div>
             

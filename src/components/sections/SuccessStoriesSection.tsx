@@ -10,7 +10,7 @@ interface Testimonial {
   image?: string;
 }
 
-const TestimonialsSection = () => {
+const SuccessStoriesSection = () => {
   const testimonials: Testimonial[] = [
     {
       quote: "Jitesh's teaching methodology is exceptional. My son was afraid of water, but after just 3 lessons, he was swimming confidently. I highly recommend his classes for children.",
@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 relative overflow-hidden bg-gradient-to-b from-white to-ocean-50">
+    <section id="success-stories" className="py-16 relative overflow-hidden bg-gradient-to-b from-white to-ocean-50">
       {/* Subtle decorative elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-1 bg-gradient-to-r from-transparent via-ocean-300 to-transparent"></div>
       
@@ -59,8 +59,8 @@ const TestimonialsSection = () => {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="inline-block py-1 px-3 text-sm font-medium text-ocean-600 bg-ocean-50 rounded-full mb-3">Testimonials</span>
-          <h2 className="text-3xl font-bold text-ocean-900 mb-4">What Our Students Say</h2>
+          <span className="inline-block py-1 px-3 text-sm font-medium text-ocean-600 bg-ocean-50 rounded-full mb-3">Success Stories</span>
+          <h2 className="text-3xl font-bold text-ocean-900 mb-4">Success Stories</h2>
           <div className="w-16 h-1 bg-ocean-400 mx-auto mb-6"></div>
           <p className="text-ocean-700 max-w-2xl mx-auto">
             Read about the experiences and transformations of our swimming students
@@ -141,4 +141,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default SuccessStoriesSection;

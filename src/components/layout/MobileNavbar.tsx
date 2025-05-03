@@ -1,79 +1,124 @@
-import { Home, Info, Book, MessageSquare, Calendar } from "lucide-react";
+import { Info, Book, MessageSquare, Calendar, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface NavItem {
   icon: React.ReactNode;
   label: string;
   href: string;
   isActive: boolean;
+  isRoute?: boolean;
 }
 
 const MobileNavbar = () => {
-  // Determine active route based on pathname and scroll position
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === "/";
+
   const pathname = window.location.pathname;
-  
+  const hash = window.location.hash;
+
   const navItems: NavItem[] = [
-    {
-      icon: <Home className="w-5 h-5" />,
-      label: "Home",
-      href: "#home",
-      isActive: pathname === "/" || pathname.includes("home"),
-    },
     {
       icon: <Info className="w-5 h-5" />,
       label: "About",
       href: "#about",
-      isActive: pathname.includes("about"),
+      isActive: hash === "#about",
     },
     {
       icon: <Book className="w-5 h-5" />,
-      label: "Lessons",
-      href: "#lessons",
-      isActive: pathname.includes("lessons"),
+      label: "Services",
+      href: "#services",
+      isActive: hash === "#services",
     },
     {
       icon: <MessageSquare className="w-5 h-5" />,
-      label: "Testimonials",
-      href: "#testimonials",
-      isActive: pathname.includes("testimonials"),
+      label: "Success",
+      href: "#success-stories",
+      isActive: hash === "#success-stories",
+    },
+    {
+      icon: <FileText className="w-5 h-5" />,
+      label: "Blog",
+      href: "/blog",
+      isActive: pathname.includes("blog"),
+      isRoute: true,
     },
     {
       icon: <Calendar className="w-5 h-5" />,
       label: "Contact",
       href: "#contact",
-      isActive: pathname.includes("contact"),
+      isActive: hash === "#contact",
     },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    isRoute: boolean = false
+  ) => {
+    if (isRoute) return;
+
     e.preventDefault();
-    const targetId = href.replace('#', '');
-    const targetElement = document.getElementById(targetId);
-    
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+
+    if (href.startsWith("#")) {
+      const targetId = href.replace("#", "");
+      if (isHomePage) {
+        const el = document.getElementById(targetId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/", { state: { scrollTo: targetId } });
+      }
+    } else {
+      navigate(href);
     }
   };
 
   return (
-    <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 px-2 py-3 shadow-sm">
-      <div className="grid grid-cols-5 gap-1">
-        {navItems.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            onClick={(e) => handleNavClick(e, item.href)}
-            className={cn(
-              "bottom-nav-item",
-              item.isActive 
-                ? "text-ocean-700" 
-                : "text-gray-500 hover:text-ocean-600"
-            )}
-          >
-            {item.icon}
-            <span>{item.label}</span>
-          </a>
-        ))}
+    <nav
+      className="
+        lg:hidden
+        fixed inset-x-0 bottom-0 z-50
+        w-full
+        bg-white border-t border-gray-200
+        py-3
+        shadow-sm
+        overflow-x-hidden
+      "
+    >
+      <div className="grid grid-cols-5 gap-1 w-full">
+        {navItems.map((item) =>
+          item.isRoute ? (
+            <Link
+              key={item.label}
+              to={item.href}
+              className={cn(
+                "bottom-nav-item flex flex-col items-center text-xs",
+                item.isActive
+                  ? "text-ocean-700"
+                  : "text-gray-500 hover:text-ocean-600"
+              )}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </Link>
+          ) : (
+            <a
+              key={item.label}
+              href={isHomePage ? item.href : `/${item.href}`}
+              onClick={(e) => handleNavClick(e, item.href, item.isRoute)}
+              className={cn(
+                "bottom-nav-item flex flex-col items-center text-xs",
+                item.isActive
+                  ? "text-ocean-700"
+                  : "text-gray-500 hover:text-ocean-600"
+              )}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </a>
+          )
+        )}
       </div>
     </nav>
   );
