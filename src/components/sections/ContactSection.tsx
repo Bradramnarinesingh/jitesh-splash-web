@@ -38,7 +38,7 @@ const ContactSection = () => {
           access_key: "bb88f39a-050c-42a1-97fe-ac0fae027d0d", // Web3Forms API Key
           from_name: "Jitesh Swimming Website",
           subject: "New Swimming Lesson Inquiry",
-          to_email: "bradramnarinesingh@gmail.com",
+          to_email: "jiteshwadhwa57@gmail.com",
           reply_to: formData.email,
           name: formData.name,
           email: formData.email,
