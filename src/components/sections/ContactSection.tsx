@@ -35,7 +35,7 @@ const ContactSection = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "bb88f39a-050c-42a1-97fe-ac0fae027d0d", // Web3Forms API Key
+          access_key: "11d067da-ccca-4410-bbc0-2fd9f65b7efe", // Web3Forms API Key
           from_name: "Jitesh Swimming Website",
           subject: "New Swimming Lesson Inquiry",
           to_email: "jiteshwadhwa57@gmail.com",
@@ -233,7 +233,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-ocean-800 text-sm mb-1">Location</h4>
-                  <p className="text-ocean-700">Brampton – Mayfield & Hurontario</p>
+                  <p className="text-ocean-700">`Bra`mpton – Mayfield & Hurontario</p>
                 </div>
               </div>
               
