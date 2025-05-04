@@ -223,7 +223,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-ocean-800 text-sm mb-1">Email</h4>
-                  <p className="text-ocean-700">jitesh@swimprotraining.com</p>
+                  <p className="text-ocean-700">jiteshwadhwa57@gmail.com</p>
                 </div>
               </div>
               
@@ -233,7 +233,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-ocean-800 text-sm mb-1">Location</h4>
-                  <p className="text-ocean-700">`Bra`mpton – Mayfield & Hurontario</p>
+                  <p className="text-ocean-700">Brampton – Mayfield & Hurontario</p>
                 </div>
               </div>
               
