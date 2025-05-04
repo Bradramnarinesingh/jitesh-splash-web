@@ -49,7 +49,7 @@ const LessonsSection = () => {
           <div className="inline-flex items-center justify-center mb-3">
             <span className="inline-block py-1 px-3 text-sm font-medium text-ocean-600 bg-gradient-to-r from-ocean-50 to-ocean-100/80 rounded-full shadow-sm">
               <span className="w-2 h-2 bg-ocean-500 rounded-full mr-2 inline-block"></span>
-              Our Services
+              My Services
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-ocean-900 mb-4">Professional <span className="bg-gradient-to-r from-ocean-600 to-ocean-500 inline-block text-transparent bg-clip-text">Swimming Services</span></h2>

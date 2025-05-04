@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
           
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-ocean-900">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-ocean-900">Contact Me</h4>
             <div className="space-y-2">
               <p className="flex items-center space-x-2 text-ocean-700">
                 <Phone size={16} className="text-ocean-600" />
@@ -44,7 +44,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center space-x-2 text-ocean-700">
                 <Mail size={16} className="text-ocean-600" />
-                <span>jitesh@swimprotraining.com</span>
+                <span>jiteshwadhwa57@gmail.com</span>
               </p>
             </div>
           </div>

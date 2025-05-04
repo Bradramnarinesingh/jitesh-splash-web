@@ -63,7 +63,7 @@ const SuccessStoriesSection = () => {
           <h2 className="text-3xl font-bold text-ocean-900 mb-4">Success Stories</h2>
           <div className="w-16 h-1 bg-ocean-400 mx-auto mb-6"></div>
           <p className="text-ocean-700 max-w-2xl mx-auto">
-            Read about the experiences and transformations of our swimming students
+            Read about the experiences and transformations of my swimming students
           </p>
         </div>
         

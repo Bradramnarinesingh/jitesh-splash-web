@@ -72,7 +72,7 @@ const BlogListPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-ocean-900 mb-4">Swimming Tips & <span className="bg-gradient-to-r from-ocean-600 to-ocean-500 inline-block text-transparent bg-clip-text">Insights</span></h2>
             <div className="w-16 h-1 bg-gradient-to-r from-ocean-400 to-ocean-300 mx-auto mb-6"></div>
             <p className="text-ocean-700 max-w-2xl mx-auto">
-              Stay updated with our latest swimming tips, techniques, and success stories
+              Stay updated with my latest swimming tips, techniques, and success stories
             </p>
           </div>
           

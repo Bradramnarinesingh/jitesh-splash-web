@@ -2,7 +2,7 @@ import { ReactNode, useEffect } from "react";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import Footer from "./Footer";
-
+import { Analytics } from "@vercel/analytics/react"
 interface LayoutProps {
   children: ReactNode;
 }

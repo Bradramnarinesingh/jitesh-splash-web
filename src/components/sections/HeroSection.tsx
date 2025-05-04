@@ -69,7 +69,7 @@ const HeroSection = () => {
               
               {/* Image */}
               <img 
-                src={heroImg}
+                src="https://t3.ftcdn.net/jpg/08/44/84/22/360_F_844842278_3Hn98RFHvaQbWdzCdjWiJfCL6SwjGG6v.jpg"
                 alt="Jitesh Wadhwa - Swimming Instructor" 
                 className="object-cover object-center w-full h-[280px]"
               />
@@ -111,7 +111,7 @@ const HeroSection = () => {
               
               {/* Image */}
               <img 
-                src={heroImg}
+                src="https://t3.ftcdn.net/jpg/08/44/84/22/360_F_844842278_3Hn98RFHvaQbWdzCdjWiJfCL6SwjGG6v.jpg"
                 alt="Jitesh Wadhwa - Swimming Instructor" 
                 className="object-cover object-center w-full h-[450px] transition-transform duration-700 group-hover:scale-105"
               />
@@ -124,7 +124,7 @@ const HeroSection = () => {
             </div>
             
             {/* Stats cards */}
-            <div className="absolute -bottom-5 -left-5 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 flex items-center space-x-3 border border-ocean-50">
+            <div className="absolute -bottom-5 right-8 bg-white/90 backdrop-blur-md shadow-lg rounded-lg p-4 flex items-center space-x-3 border border-ocean-50">
               <div className="bg-gradient-to-br from-ocean-100 to-ocean-50 p-2 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-ocean-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
